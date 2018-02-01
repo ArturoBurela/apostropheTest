@@ -12,7 +12,9 @@ var apos = require('apostrophe')({
 
     // Apostrophe module configuration
 
-    'apostrophe-blog': {},
+    'apostrophe-blog': {
+      widget: true
+    },
     'apostrophe-blog-pages': {},
     'apostrophe-blog-widgets': {},
 
