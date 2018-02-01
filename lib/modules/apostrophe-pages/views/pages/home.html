@@ -15,6 +15,21 @@
         <a class="login-link" href="/login">Login</a>
       {% endif %}
     </h3>
+    {% if data.page %}
+  <ul class="accordion">
+    {% for ancestor in data.page._ancestors %}
+      <li><a href="{{ ancestor._url }}">{{ ancestor.title }}</a>
+        {% if ancestor._children.length %}
+          <ul>
+            {% for child in ancestor._children %}
+              <li><a href="{{ child._url }}">{{ child.title }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
     <p>This is a very bare bones Apostrophe project. Now, get to work and make a real website!</p>
     {{ apos.area(data.page, 'body', {
         widgets: {
