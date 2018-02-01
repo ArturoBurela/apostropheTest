@@ -3,7 +3,33 @@
   <div class="block hero">
     <div class="inner">
       <div class="hero-text">
+        <h2><a href="{{ data.home._url }}">{{ data.home.title }}</a></h2>
         <h4>Welcome to my first Apostrophe site!</h4>
+        <ul class="tabs">
+  {% for tab in data.home._children %}
+    <li class="
+      {% if data.page and
+        (apos.pages.isAncestorOf(tab, data.page) or tab._id == data.page._id)
+      %}
+        current
+      {% endif %}
+    "><a href="{{ tab._url }}">{{ tab.title }}</a></li>
+  {% endfor %}
+</ul>
+<ul class="tabs">
+  {% for tab in data.home._children %}
+    <li><a href="{{ tab._url }}">{{ tab.title }}</a>
+      {% if tab._children.length %}
+        <ul>
+          {% for child in tab._children %}
+            <li><a href="{{ child._url }}">{{ child.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
       </div>
     </div>
   </div>
