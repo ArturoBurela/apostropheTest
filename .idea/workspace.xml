@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="502d97a9-8ba3-43a5-9325-a3e329e78c89" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/modules/apostrophe-pages/views/pages/home.html" afterPath="$PROJECT_DIR$/lib/modules/apostrophe-pages/views/pages/home.html" />
-    </list>
+    <list default="true" id="502d97a9-8ba3-43a5-9325-a3e329e78c89" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />

@@ -6,14 +6,19 @@ var apos = require('apostrophe')({
   // See lib/modules for basic project-level configuration of our modules
   // responsible for serving static assets, managing page templates and
   // configuring user acounts.
-
+  // We must declare the bundle!
+  bundles: [ 'apostrophe-blog' ],
   modules: {
 
     // Apostrophe module configuration
 
+    'apostrophe-blog': {},
+    'apostrophe-blog-pages': {},
+    'apostrophe-blog-widgets': {},
+
     // Note: most configuration occurs in the respective
     // modules' directories. See lib/apostrophe-assets/index.js for an example.
-    
+
     // However any modules that are not present by default in Apostrophe must at
     // least have a minimal configuration here: `moduleName: {}`
 
